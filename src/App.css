@@ -1,33 +1,40 @@
-.App {
-  text-align: center;
+.jumbotron{
+  background-image: linear-gradient(#A88BEB, #F8CEEC), url('images/desk.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 0%;
+  height: 330px;
+  color:#ffffff;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.afterBurnNav .navbarBrandAfterBurn{
+  /* background: -webkit-linear-gradient(left, #20BF55, #01BAEF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.afterBurnNav .navbar-nav .nav-link{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
-.App-link {
-  color: #61dafb;
+.catHeader{
+  text-transform: uppercase;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.catImgs{
+  height:300px;
+}
+.jumboHeader{
+  text-shadow: 0.6px 0.5px 0.4px #464646;
+  font-size: 50px;
+}
+.txt-rotate{
+  border-right: 0.08em solid #ffffff; 
+  padding-right: 10px;
 }
