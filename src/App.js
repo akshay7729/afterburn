@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React, {Component} from 'react';
-import './App.css';
+import './App.scss';
 import Header from './components/Header'
 import MainFold from './components/MainFold'
 import Categories from './components/Categories';

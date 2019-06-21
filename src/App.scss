@@ -1,3 +1,7 @@
+$roboto : 'Roboto', sans-serif;
+
+body{font-family: $roboto;}
+
 .jumbotron{
   background-image: linear-gradient(#A88BEB, #F8CEEC), url('images/desk.jpg');
   background-size: cover;
@@ -23,13 +27,6 @@
   font-weight: bold;
   letter-spacing: 0.5px;
 }
-
-.catHeader{
-  text-transform: uppercase;
-}
-.catImgs{
-  height:300px;
-}
 .jumboHeader{
   text-shadow: 0.6px 0.5px 0.4px #464646;
   font-size: 50px;
@@ -37,4 +34,7 @@
 .txt-rotate{
   border-right: 0.08em solid #ffffff; 
   padding-right: 10px;
+}
+.catCardImg{
+  height: 440px;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { transform } from '@babel/core';
+import { Card, CardImg, CardBody, CardTitle, CardText, Button, CardFooter } from 'reactstrap';
 
 class Categories extends Component{
 
@@ -7,13 +7,15 @@ class Categories extends Component{
 
         const cat = this.props.categories.map((category) => {
             return(
-                <div className="col-3 catsCol" key={category.id}>
-                    <div>
-                        <figure>
-                            <img src={category.img} alt={category.name} className="w-100 catImgs"/>
-                        </figure>
-                        <figcaption>{category.name}</figcaption>
-                    </div>
+                <div className="col-md-3 catsCol" key={category.id}>
+                    <Card>
+                        <CardImg src={category.img} alt={category.name} className="catCardImg"></CardImg>
+                        <CardBody>
+                            <CardTitle>{category.name}</CardTitle>
+                            <CardText>{category.desc}</CardText>
+                            <Button>Browse</Button>
+                        </CardBody>
+                    </Card>
                 </div>
             )
         });
@@ -21,7 +23,7 @@ class Categories extends Component{
         return(
             <div className="container">
                 <div className="row">
-                    <h2 className="catHeader pb-4">Categories</h2>
+                    <h2 className="catHeader pb-4">Recommended for you</h2>
                 </div>
 
                 <div className="cats">
