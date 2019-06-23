@@ -1,40 +1,60 @@
-$roboto : 'Roboto', sans-serif;
-
+@import "./scss/config";
 body{font-family: $roboto;}
-
 .jumbotron{
-  background-image: linear-gradient(#A88BEB, #F8CEEC), url('images/desk.jpg');
+  background-image: linear-gradient(map-get($colors, abRed), map-get($colors, abBlack)), url(/static/media/desk.2dcd0125.jpg);
   background-size: cover;
   background-attachment: fixed;
   border-radius: 0%;
   height: 330px;
-  color:#ffffff;
+  color:map-get($colors, abWhite);
+  .jumboHeader{
+    text-shadow: 0.6px 0.5px 0.4px #464646;
+    font-size: 3rem;
+  }
 }
 
-.afterBurnNav .navbarBrandAfterBurn{
-  /* background: -webkit-linear-gradient(left, #20BF55, #01BAEF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ffffff;
-}
-
-.afterBurnNav .navbar-nav .nav-link{
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-.jumboHeader{
-  text-shadow: 0.6px 0.5px 0.4px #464646;
-  font-size: 50px;
+.afterBurnNav{
+  .navbarBrandAfterBurn{
+    background: -webkit-linear-gradient(left, map-get($colors, abRed),map-get($colors, abBlack));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .navbar-nav{
+    .nav-link{
+      color:map-get($colors, abBlack);
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+  }
 }
 .txt-rotate{
-  border-right: 0.08em solid #ffffff; 
+  border-right: 0.08em solid map-get($colors, abWhite); 
   padding-right: 10px;
 }
-.catCardImg{
-  height: 440px;
+
+.catCard{
+  .catCardImg{
+    height: 440px;
+  }
+  .card-title{
+    font-size: 1.4rem;
+    color:map-get($colors, abRed);
+  }
+  .catCardBrowse{
+    background: map-get($colors, abRed);
+    color: map-get($colors, abWhite);
+    border:none;
+    &:hover{
+      background:map-get($colors, abBlack);;
+    }
+  }
+}
+
+.footer{
+  background: map-get($colors, abBlack);
+  color:map-get($colors, abWhite);
 }

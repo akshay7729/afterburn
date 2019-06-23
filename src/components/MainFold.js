@@ -51,7 +51,7 @@ const MainFold = () => {
         <div>
             <Jumbotron>
                 <h1 className="text-center text-uppercase font-weight-bold jumboHeader pt-5">
-                    <span class="txt-rotate" data-period="2000"
+                    <span className="txt-rotate" data-period="2000"
                         data-rotate='[ "Welcome to Afterburn", "Get Latest Games"]'>
                     </span>
                 </h1>

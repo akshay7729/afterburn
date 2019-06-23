@@ -21,7 +21,7 @@ class Header extends Component{
 
     render(){
         return(
-            <Navbar light expand="md" className="afterBurnNav" fixed={'top'}>
+            <Navbar light expand="md" className="afterBurnNav">
                 <NavbarBrand href="/" className="navbarBrandAfterBurn">Afterburn</NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                 <Collapse isOpen={!this.state.collapsed} navbar>
