@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, CardImg, CardBody, CardTitle, CardText, Button, CardFooter } from 'reactstrap';
+import { Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 
 class Categories extends Component{
 
