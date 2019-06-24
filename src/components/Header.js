@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 class Header extends Component{
 
@@ -22,24 +23,26 @@ class Header extends Component{
     render(){
         return(
             <Navbar light expand="md" className="afterBurnNav">
-                <NavbarBrand href="/" className="navbarBrandAfterBurn">Afterburn</NavbarBrand>
+                <Link to="/">
+                    <NavbarBrand href="/" className="navbarBrandAfterBurn">Afterburn</NavbarBrand>
+                </Link>
                 <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                 <Collapse isOpen={!this.state.collapsed} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink href="/components/"><FontAwesomeIcon icon={faSearch} /></NavLink>
+                            <NavLink><FontAwesomeIcon icon={faSearch} /></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/components/">Latest</NavLink>
+                            <Link to="/" className="nav-link">shop</Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/components/">About</NavLink>
+                            <Link to="/about" className="nav-link">about</Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/components/">Contact</NavLink>
+                            <Link to="/contact" className="nav-link">contact</Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/components/"><FontAwesomeIcon icon={faUser} /></NavLink>
+                            <NavLink><FontAwesomeIcon icon={faUser} /></NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>

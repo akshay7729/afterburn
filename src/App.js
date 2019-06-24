@@ -4,28 +4,24 @@ import React, {Component} from 'react';
 import './scss/config.scss';
 import './App.scss';
 import Header from './components/Header'
-import MainFold from './components/MainFold'
-import Categories from './components/Categories';
-import { CATEGORIES } from './shared/categoriesDate'
+import Home from './components/Home'
 import Footer from './components/Footer';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 class App extends Component{
-
-  constructor(props){
-    super(props)
-
-    this.state = {
-        categories : CATEGORIES
-    }
-
-  }
-
   render(){
     return (
       <div className="App">
-        <Header />
-        <MainFold />
-        <Categories categories={this.state.categories} />
+          <Router>
+            <Header />
+            <Switch>
+            <Route path="/" exact component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
+          </Router>
         <Footer />
       </div>
     );

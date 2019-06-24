@@ -1,7 +1,7 @@
 @import "./scss/config";
 body{font-family: $roboto;}
 .jumbotron{
-  background-image: linear-gradient(map-get($colors, abRed), map-get($colors, abBlack)), url(/static/media/desk.2dcd0125.jpg);
+  background-image: linear-gradient(map-get($colors, abRed), map-get($colors, abBlack));
   background-size: cover;
   background-attachment: fixed;
   border-radius: 0%;
@@ -28,12 +28,11 @@ body{font-family: $roboto;}
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 0.5px;
+        &:hover{
+          text-decoration: none;
+        }
     }
   }
-}
-.txt-rotate{
-  border-right: 0.08em solid map-get($colors, abWhite); 
-  padding-right: 10px;
 }
 
 .catCard{
