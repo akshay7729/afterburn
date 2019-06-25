@@ -2,25 +2,29 @@ import React, { Component } from 'react';
 import MainFold from './MainFold';
 import Categories from './Categories';
 import { CATEGORIES } from '../shared/categoriesDate'
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+
+const mapStateTOProps = state => {
+    return{
+        categories : CATEGORIES
+    }
+}
 
 class Home extends Component {
 
     constructor(props){
         super(props)
-
-        this.state = {
-            categories : CATEGORIES
-        }
     }
 
     render() {
         return (
             <React.Fragment>
                 <MainFold />
-                <Categories categories={this.state.categories} />
+                <Categories categories={this.props.categories} />
             </React.Fragment>
         );
     }
 }
 
-export default Home;
+export default withRouter(connect(mapStateTOProps)(Home));

@@ -8,12 +8,16 @@ import Home from './components/Home'
 import Footer from './components/Footer';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ConfigureStore } from './redux/configureStore';
 
+const store = ConfigureStore();
 class App extends Component{
   render(){
     return (
-      <div className="App">
+      <Provider store={store}>
+        <div className="App">
           <Router>
             <Header />
             <Switch>
@@ -22,8 +26,9 @@ class App extends Component{
               <Route path="/contact" component={Contact} />
             </Switch>
           </Router>
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </Provider>
     );
   }
 }
