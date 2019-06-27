@@ -1,17 +1,17 @@
 @import "./scss/config";
 body{font-family: $roboto;}
-.jumbotron{
-  background-image: linear-gradient(map-get($colors, abRed), map-get($colors, abBlack));
-  background-size: cover;
-  background-attachment: fixed;
-  border-radius: 0%;
-  height: 330px;
-  color:map-get($colors, abWhite);
-  .jumboHeader{
-    text-shadow: 0.6px 0.5px 0.4px #464646;
-    font-size: 3rem;
-  }
-}
+// .jumbotron{
+//   background-image: linear-gradient(map-get($colors, abRed), map-get($colors, abBlack));
+//   background-size: cover;
+//   background-attachment: fixed;
+//   border-radius: 0%;
+//   height: 330px;
+//   color:map-get($colors, abWhite);
+//   .jumboHeader{
+//     text-shadow: 0.6px 0.5px 0.4px #464646;
+//     font-size: 3rem;
+//   }
+// }
 
 .afterBurnNav{
   .navbarBrandAfterBurn{
@@ -56,4 +56,8 @@ body{font-family: $roboto;}
 .footer{
   background: map-get($colors, abBlack);
   color:map-get($colors, abWhite);
+}
+
+.abCarouselImg{
+  height: 30rem;
 }
