@@ -41,7 +41,7 @@ class Header extends Component{
                                 <NavLink><FontAwesomeIcon icon={faSearch} /></NavLink>
                             </NavItem>
                             <NavItem>
-                                <Link to="/" className="nav-link">shop</Link>
+                                <Link to="/productsList" className="nav-link">shop</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/about" className="nav-link">about</Link>

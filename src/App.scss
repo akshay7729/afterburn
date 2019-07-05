@@ -1,17 +1,5 @@
 @import "./scss/config";
 body{font-family: $roboto;}
-// .jumbotron{
-//   background-image: linear-gradient(map-get($colors, abRed), map-get($colors, abBlack));
-//   background-size: cover;
-//   background-attachment: fixed;
-//   border-radius: 0%;
-//   height: 330px;
-//   color:map-get($colors, abWhite);
-//   .jumboHeader{
-//     text-shadow: 0.6px 0.5px 0.4px #464646;
-//     font-size: 3rem;
-//   }
-// }
 
 .afterBurnNav{
   .navbarBrandAfterBurn{
@@ -49,6 +37,33 @@ body{font-family: $roboto;}
     border:none;
     &:hover{
       background:map-get($colors, abBlack);;
+    }
+  }
+}
+
+.prodLists{
+  .breadcrumb{
+    background: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    li{
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.prodCard{
+  a{
+    text-decoration: none;
+  }
+  .card-body{
+    color: map-get($colors, abBlack);
+    .newPrice{
+      text-decoration: line-through;
+      padding-right: 1rem;
+      color:rgba(0,0,0,0.5);
     }
   }
 }

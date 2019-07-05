@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 class Categories extends Component{
 
@@ -13,7 +14,9 @@ class Categories extends Component{
                         <CardBody>
                             <CardTitle>{category.name}</CardTitle>
                             <CardText>{category.desc}</CardText>
-                            <Button className="w-100 catCardBrowse">Browse</Button>
+                            <Button className="w-100 catCardBrowse">
+                                <Link to="/productsList" className="nav-link">shop</Link>
+                            </Button>
                         </CardBody>
                     </Card>
                 </div>

@@ -9,12 +9,12 @@ import {
 
 const items = [
   {
-    src: '/assests/images/shoes/shoes4.jpg',
+    src: '/assests/images/shoes/hypervenomWallpaper.jpg',
     altText: '',
     caption: ''
   },
   {
-    src: '/assests/images/shoes/shoes1.jpg',
+    src: '/assests/images/shoes/adidasPrediator.jpg',
     altText: '',
     caption: ''
   },
