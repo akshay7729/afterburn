@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Col from 'reactstrap/lib/Col';
-import { Row, Breadcrumb, BreadcrumbItem, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+import { Row, Breadcrumb, BreadcrumbItem, Card, CardImg, CardText, CardBody, CardTitle, Label } from 'reactstrap';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRupeeSign, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faRupeeSign } from '@fortawesome/free-solid-svg-icons'
+import { Control, LocalForm } from 'react-redux-form'
 
 const mapStateTOProps = state => {
     return{
@@ -14,10 +15,14 @@ const mapStateTOProps = state => {
 
 class ProductsList extends Component {
 
+    onSort(val){
+        console.log(`sort ${val}`)
+    }
+
     render(){
         const prodList = this.props.products.map((prod) => {
             return(
-                <Col xs="3" key={prod.id}>
+                <Col md="3" key={prod.id}>
                     <Card className="mb-4 prodCard">
                         <Link to="/">
                             <CardImg top width="100%" src={prod.img} alt={prod.name} />
@@ -44,8 +49,23 @@ class ProductsList extends Component {
                     <BreadcrumbItem active>Shop</BreadcrumbItem>
                 </Breadcrumb>
                 <Row>
-                    <Col xs="2">Filter Col</Col>
-                    <Col xs="10">
+                    <Col md="2">Filter Col</Col>
+                    <Col md="10">
+                        <Row className="mb-2">
+                            <Col md="9"></Col>
+                            <Col md="3">
+                                <LocalForm>
+                                    <Control.select 
+                                        name="filterProducts"
+                                        model=".filterProducts"
+                                        className="form-control"
+                                    >
+                                        <option>Relevance</option>
+                                        <option>Popular</option>
+                                    </Control.select>
+                                </LocalForm>
+                            </Col>
+                        </Row>
                         <Row>{prodList}</Row>
                     </Col>
                 </Row>
