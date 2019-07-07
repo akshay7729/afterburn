@@ -6,22 +6,32 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image';
 
 const items = [
   {
     src: '/assests/images/shoes/hypervenomWallpaper.jpg',
     altText: '',
-    caption: ''
+    caption: '',
+    src0: '/assests/images/shoes/responsive/hypervenomWallpaper0.jpg',
+    src480: '/assests/images/shoes/responsive/hypervenomWallpaper480.jpg',
+    src768: '/assests/images/shoes/responsive/hypervenomWallpaper768.jpg'
   },
   {
     src: '/assests/images/shoes/adidasPrediator.jpg',
     altText: '',
-    caption: ''
+    caption: '',
+    src0: '/assests/images/shoes/responsive/adidasPrediator0.jpg',
+    src480: '/assests/images/shoes/responsive/adidasPrediator480.jpg',
+    src768: '/assests/images/shoes/responsive/adidasPrediator768.jpg'
   },
   {
     src: '/assests/images/shoes/shoes2.jpg',
     altText: '',
-    caption: ''
+    caption: '',
+    src0: '/assests/images/shoes/responsive/shoes0.jpg',
+    src480: '/assests/images/shoes/responsive/shoes480.jpg',
+    src768: '/assests/images/shoes/responsive/shoes768.jpg'
   }
 ];
 
@@ -71,7 +81,33 @@ class ABCarousel extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} className="w-100 abCarouselImg mb-5"/>
+          {/* <img 
+            src={item.src} 
+            alt={item.altText}
+            className="w-100 abCarouselImg mb-5"
+          /> */}
+
+        <ResponsiveImage className={"abCarouselImg mb-5"}>
+          <ResponsiveImageSize
+            default
+            minWidth={0}
+            path={item.src0}
+          />
+          <ResponsiveImageSize
+            default
+            minWidth={480}
+            path={item.src480}
+          />
+          <ResponsiveImageSize
+            minWidth={768}
+            path={item.src768}
+          />
+          <ResponsiveImageSize
+            minWidth={1100}
+            path={item.src}
+          />
+        </ResponsiveImage>
+
           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
         </CarouselItem>
       );

@@ -78,5 +78,8 @@ body{font-family: $roboto;}
 }
 
 .abCarouselImg{
-  height: 30rem;
+  img{
+    width: 100%;
+    height: 30rem;
+  }
 }

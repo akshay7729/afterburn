@@ -15,6 +15,7 @@
     "react-owl-carousel2": "^0.3.0",
     "react-redux": "^7.1.0",
     "react-redux-form": "^1.16.13",
+    "react-responsive-image": "^5.0.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.0",
