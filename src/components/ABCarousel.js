@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
-} from 'reactstrap';
+import {Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from 'reactstrap';
 import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image';
 
 const items = [
@@ -81,11 +75,6 @@ class ABCarousel extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          {/* <img 
-            src={item.src} 
-            alt={item.altText}
-            className="w-100 abCarouselImg mb-5"
-          /> */}
 
         <ResponsiveImage className={"abCarouselImg mb-5"}>
           <ResponsiveImageSize

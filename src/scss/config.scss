@@ -4,3 +4,11 @@ $colors: (
   abBlack: #1a1a1a,
   abWhite: #fff
 );
+.overflowXauto{
+  overflow-x: auto;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box; 
+}
