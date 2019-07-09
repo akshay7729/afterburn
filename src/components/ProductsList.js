@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Col from 'reactstrap/lib/Col';
-import { Row, Breadcrumb, BreadcrumbItem, Card, CardImg, CardText, CardBody, CardTitle, Label } from 'reactstrap';
+import { Row, Breadcrumb, BreadcrumbItem, Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,8 +15,18 @@ const mapStateTOProps = state => {
 
 class ProductsList extends Component {
 
-    onSort(val){
-        console.log(`sort ${val}`)
+    constructor(props){
+        super(props)
+
+        this.state = {
+            sorted: ''
+        }
+    }
+
+    onSort(e){
+        this.setState({
+            sorted: e.target.value
+        })
     }
 
     render(){
@@ -52,16 +62,18 @@ class ProductsList extends Component {
                     <Col md="2">Filter Col</Col>
                     <Col md="10">
                         <Row className="mb-2">
-                            <Col md="9"></Col>
+                            <Col md="9">{this.state.sorted}</Col>
                             <Col md="3">
                                 <LocalForm>
                                     <Control.select 
                                         name="filterProducts"
                                         model=".filterProducts"
                                         className="form-control"
+                                        onChange={this.onSort.bind(this)}
+                                        value={this.state.sorted}
                                     >
-                                        <option>Relevance</option>
-                                        <option>Popular</option>
+                                        <option value="Relevance">Relevance</option>
+                                        <option value="Popular">Popular</option>
                                     </Control.select>
                                 </LocalForm>
                             </Col>
