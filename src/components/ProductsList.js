@@ -31,9 +31,10 @@ class ProductsList extends Component {
 
     render(){
         const prodList = this.props.products.map((prod) => {
+            console.log(`is mobile - ${this.props.isMobile}`)
             return(
-                <Col md="3" key={prod.id}>
-                    <Card className="mb-4 prodCard">
+                <Col md="3" xs="6" key={prod.id} className={(prod.id%2 ? 'mpr-1' : 'mpl-1')}>
+                    <Card className="mb-4 mmb-4 prodCard">
                         <Link to="/">
                             <CardImg top width="100%" src={prod.img} alt={prod.name} />
                             <CardBody>

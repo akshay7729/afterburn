@@ -12,3 +12,9 @@ $colors: (
   border-radius: $radius;
   background-clip: padding-box; 
 }
+
+@media screen and (max-width:767px){
+  .mpl-1{padding-left: .25rem!important;}
+  .mpr-1{padding-right: .25rem!important;}
+  .mmb-4{margin-bottom: 0.5rem!important;}
+}
