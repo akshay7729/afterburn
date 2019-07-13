@@ -1,26 +1,30 @@
 export const CATEGORIES = [
     {
-        id: 0,
-        name: 'Buy Latest Games',
-        desc: 'Get latest PS4/XBOX/PC Games at the lowest prices and more',
-        img: 'assests/images/gaming/uncharted4.jpg'
-    },
-    {
         id: 1,
-        name: 'Watch Games Events',
-        desc: 'Get updated with the latest gaming events around the world',
-        img: 'assests/images/gaming/events.jpg'
+        name: 'Buy Sport Shoes',
+        desc: 'Get latest PS4/XBOX/PC Games at the lowest prices and more',
+        img: 'assests/images/shoes/responsive/hypervenomWallpaper0.jpg',
+        type: 'sport'
     },
     {
         id: 2,
-        name: 'Buy/Sell Controllers',
-        desc: 'Buy or Sell new or used controllers anywhere around India',
-        img: 'assests/images/gaming/controller.png'
+        name: 'Buy Sneakers',
+        desc: 'Get updated with the latest gaming events around the world',
+        img: 'assests/images/shoes/responsive/shoes0.jpg',
+        type: 'casual'
     },
     {
         id: 3,
+        name: 'Buy/Sell Controllers',
+        desc: 'Buy or Sell new or used controllers anywhere around India',
+        img: 'assests/images/gaming/controller.png',
+        type: 'boots'
+    },
+    {
+        id: 4,
         name: 'Gaming Accessories',
         desc: 'Get latest accessories for your consoles and up your gaming experience',
-        img: 'assests/images/gaming/vr.jpg'
+        img: 'assests/images/gaming/vr.jpg',
+        type: 'formals'
     }
 ]

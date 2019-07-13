@@ -8,17 +8,17 @@ const MobileCards = () => {
                 <Row className="flex-nowrap">
                     <Col xs="10">
                         <div className="mobileCardBox">
-                            <img src="/assests/images/shoes/mobileCards/mc1.jpg" className="w-100"/>
+                            <img src="/assests/images/shoes/mobileCards/mc1.jpg" className="w-100" alt="mobile cards"/>
                         </div>
                     </Col>
                     <Col xs="10">
                         <div className="mobileCardBox">
-                            <img src="/assests/images/shoes/mobileCards/mc2.jpg" className="w-100"/>
+                            <img src="/assests/images/shoes/mobileCards/mc2.jpg" className="w-100" alt="mobile cards"/>
                         </div>
                     </Col>
                     <Col xs="10">
                         <div className="mobileCardBox">
-                            <img src="/assests/images/shoes/mobileCards/mc2.jpg" className="w-100"/>
+                            <img src="/assests/images/shoes/mobileCards/mc2.jpg" className="w-100" alt="mobile cards"/>
                         </div>
                     </Col>
                 </Row>

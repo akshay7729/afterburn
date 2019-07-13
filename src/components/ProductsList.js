@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRupeeSign } from '@fortawesome/free-solid-svg-icons'
 import { Control, LocalForm } from 'react-redux-form'
 
+
 const mapStateTOProps = state => {
     return{
         products : state.products
@@ -14,41 +15,28 @@ const mapStateTOProps = state => {
 }
 
 class ProductsList extends Component {
-
-    constructor(props){
-        super(props)
-
-        this.state = {
-            sorted: ''
-        }
-    }
-
-    onSort(e){
-        this.setState({
-            sorted: e.target.value
-        })
-    }
-
     render(){
         const prodList = this.props.products.map((prod) => {
-            console.log(`is mobile - ${this.props.isMobile}`)
-            return(
-                <Col md="3" xs="6" key={prod.id} className={(prod.id%2 ? 'mpr-1' : 'mpl-1')}>
-                    <Card className="mb-4 mmb-4 prodCard">
-                        <Link to="/">
-                            <CardImg top width="100%" src={prod.img} alt={prod.name} />
-                            <CardBody>
-                            <CardTitle className="font-weight-bold">{prod.name}</CardTitle>
-                            <CardText>{prod.desc}</CardText>
-                            <CardText>
-                                <span className="newPrice"><FontAwesomeIcon icon={faRupeeSign} /> {prod.oldPrice} </span>
-                                <span className="oldPrice"><FontAwesomeIcon icon={faRupeeSign} /> {prod.newPrice}</span>
-                            </CardText>
-                            </CardBody>
-                        </Link>
-                    </Card>
-                </Col> 
-            )
+            var paramID = this.props.match.params.id;
+            if(prod.type === paramID || prod.gender === paramID){
+                return(
+                    <Col md="3" xs="6" key={prod.id} className={(prod.id%2 ? 'mpr-1' : 'mpl-1')}>
+                        <Card className="mb-4 mmb-4 prodCard">
+                            <Link to="/">
+                                <CardImg top width="100%" src={prod.img} alt={prod.name} />
+                                <CardBody>
+                                <CardTitle className="font-weight-bold">{prod.name}</CardTitle>
+                                <CardText>{prod.desc}</CardText>
+                                <CardText>
+                                    <span className="newPrice"><FontAwesomeIcon icon={faRupeeSign} /> {prod.oldPrice} </span>
+                                    <span className="oldPrice"><FontAwesomeIcon icon={faRupeeSign} /> {prod.newPrice}</span>
+                                </CardText>
+                                </CardBody>
+                            </Link>
+                        </Card>
+                    </Col> 
+                )
+            }
         });
 
         return (
@@ -63,15 +51,13 @@ class ProductsList extends Component {
                     <Col md="2">Filter Col</Col>
                     <Col md="10">
                         <Row className="mb-2">
-                            <Col md="9">{this.state.sorted}</Col>
+                            <Col md="9" className="shoesHeading">{this.props.match.params.id} Shoes</Col>
                             <Col md="3">
                                 <LocalForm>
                                     <Control.select 
                                         name="filterProducts"
                                         model=".filterProducts"
                                         className="form-control"
-                                        onChange={this.onSort.bind(this)}
-                                        value={this.state.sorted}
                                     >
                                         <option value="Relevance">Relevance</option>
                                         <option value="Popular">Popular</option>

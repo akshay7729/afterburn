@@ -32,11 +32,13 @@ body{font-family: $roboto;}
     color:map-get($colors, abRed);
   }
   .catCardBrowse{
-    background: map-get($colors, abRed);
-    color: map-get($colors, abWhite);
+    background: map-get($colors, abBlack);
     border:none;
+    a{
+      color: map-get($colors, abWhite);
+    }
     &:hover{
-      background:map-get($colors, abBlack);;
+      background:map-get($colors, abRed);;
     }
   }
 }
@@ -57,6 +59,9 @@ body{font-family: $roboto;}
 .prodCard{
   a{
     text-decoration: none;
+  }
+  img{
+    height: 20rem;
   }
   .card-body{
     color: map-get($colors, abBlack);
@@ -93,4 +98,32 @@ body{font-family: $roboto;}
       }
     }
   }
+}
+
+.menWomenBanner{
+  .banner{
+    .card-body{
+      background: #0000006e;
+      height: 50rem;
+      .card-title{
+        color:map-get($colors, abWhite);
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 1px map-get($colors, abBlack);
+        border:1px solid map-get($colors, abWhite);
+      }
+      transition: all 0.3s ease;
+      &:hover{
+        background: #000000a1;
+      }
+    }
+    img{
+      height: 50rem;
+    }
+  }
+}
+
+.shoesHeading{
+  text-transform: capitalize;
+  font-size: 1.4rem;
 }
