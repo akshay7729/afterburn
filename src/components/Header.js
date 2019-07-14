@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink} from 'reactstrap';
+import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, Input} from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faSearch, faHeart, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 
@@ -37,17 +37,21 @@ class Header extends Component{
                     <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                     <Collapse isOpen={!this.state.collapsed} navbar>
                         <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink><FontAwesomeIcon icon={faSearch} /></NavLink>
+                            <NavItem className="searchBox pr-3">
+                                <span className="searchLogo"><FontAwesomeIcon icon={faSearch} /></span>
+                                <Input type="text" name="search" placeholder="Search" className="mainSearch border-0"/>
                             </NavItem>
                             <NavItem>
-                                <Link to="/productsList" className="nav-link">shop</Link>
+                                <Link to="/productsList" className="nav-link"><FontAwesomeIcon icon={faHeart} /></Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/about" className="nav-link">about</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/contact" className="nav-link">contact</Link>
+                            </NavItem>
+                            <NavItem>
+                                <Link to="/productsList" className="nav-link"><FontAwesomeIcon icon={faShoppingBag} /></Link>
                             </NavItem>
                             <NavItem>
                                 <span className="nav-link" onClick={this.toggleModal}>

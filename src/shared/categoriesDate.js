@@ -15,16 +15,16 @@ export const CATEGORIES = [
     },
     {
         id: 3,
-        name: 'Buy/Sell Controllers',
+        name: 'Buy Boots Shoes',
         desc: 'Buy or Sell new or used controllers anywhere around India',
-        img: 'assests/images/gaming/controller.png',
+        img: 'assests/images/shoes/boots.jpg',
         type: 'boots'
     },
     {
         id: 4,
-        name: 'Gaming Accessories',
+        name: 'Buy Formal Shoes',
         desc: 'Get latest accessories for your consoles and up your gaming experience',
-        img: 'assests/images/gaming/vr.jpg',
+        img: 'assests/images/shoes/formals.jpg',
         type: 'formals'
     }
 ]

@@ -2,11 +2,14 @@ $roboto : 'Roboto', sans-serif;
 $colors: (
   abRed: #ff628c,
   abBlack: #1a1a1a,
-  abWhite: #fff
+  abWhite: #fff,
+  abLightGrey: rgba(0,0,0,0.6)
 );
 .overflowXauto{
   overflow-x: auto;
 }
+.abLightGrey{color: map-get($colors, abLightGrey)}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   border-radius: $radius;

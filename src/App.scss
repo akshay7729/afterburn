@@ -21,6 +21,26 @@ body{font-family: $roboto;}
         }
     }
   }
+  .searchBox{
+    .searchLogo{
+      position: absolute;
+      margin-top: 7px;
+      margin-left: 12px;
+      color: map-get($colors, abLightGrey);
+      svg{
+        font-size: 1rem;
+      }
+    }
+    .mainSearch{
+      background: #f4f7fa;
+      width: 30rem;
+      border-radius: 1rem;
+      padding-left: 2.5rem;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
 }
 
 .catCard{
@@ -126,4 +146,77 @@ body{font-family: $roboto;}
 .shoesHeading{
   text-transform: capitalize;
   font-size: 1.4rem;
+}
+
+.pdp{
+  .pdpInner{
+    .pdpInnerData{
+      .pdpPrice{
+        font-size: 1.8rem;
+        .pdpPriceOld{
+          text-decoration: line-through;
+          color:rgba(0,0,0,0.5);
+        }
+      }
+      .pdpName{
+        font-size: 1.4rem;
+        background: -webkit-linear-gradient(left, map-get($colors, abRed),map-get($colors, abBlack));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .pdpCategoriesHeading{
+        letter-spacing: 0.07rem;
+      }
+      .pdpProdImg{
+        img{
+          height: 40rem;
+          max-height: 50rem;
+        }
+      }
+      .pdpSelectSize{
+        span{
+          margin-right: 1rem;
+          padding: 0.5rem 0.88rem;
+          cursor: pointer;
+          background: map-get($colors, abRed);
+          color:map-get($colors, abWhite);
+          box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2)
+        }
+      }
+      .pdpProdColor{
+        background-color: orange;
+        width: 30px;
+        height: 30px;
+      }
+      .pdpBestOffers{
+        list-style: none;
+        li{
+          svg{
+            color:map-get($colors, abRed);
+            font-size: .8rem;
+          }
+        }
+      }
+      .pdpCartWishList{
+        button{
+          padding: .7rem 4rem;
+        }
+        .pdpAddToCartBtn{
+          button{
+            background: map-get($colors, abRed)
+          }
+        }
+        .pdpAddToWishListBtn{
+          button{
+            background: map-get($colors, abWhite);
+            color:map-get($colors, abLightGrey);
+            border:1px solid rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+  }
 }
