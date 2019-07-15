@@ -13,6 +13,7 @@ export const PRODUCTSLIST = [
             pdpName: 'Nike Mercurial C3350',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/products/merc3pdp.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["5","6","7","8"],
             offers: [
                 {
@@ -44,6 +45,7 @@ export const PRODUCTSLIST = [
             pdpName: 'Nike Zoom Pagasus 3000',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/products/nikeShoes1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["8","9"],
             offers: [
                 {
@@ -71,6 +73,7 @@ export const PRODUCTSLIST = [
             pdpName: 'akshay',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/pdp1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["5","6"],
             offers: [
                 {
@@ -102,6 +105,7 @@ export const PRODUCTSLIST = [
             pdpName: 'akshay',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/pdp1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["8","9"],
             offers: [
                 {
@@ -133,6 +137,7 @@ export const PRODUCTSLIST = [
             pdpName: 'akshay',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/pdp1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["8","9"],
             offers: [
                 {
@@ -164,6 +169,7 @@ export const PRODUCTSLIST = [
             pdpName: 'akshay',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/pdp1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["8","9"],
             offers: [
                 {
@@ -195,6 +201,7 @@ export const PRODUCTSLIST = [
             pdpName: 'akshay',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/pdp1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["8","9"],
             offers: [
                 {
@@ -226,6 +233,7 @@ export const PRODUCTSLIST = [
             pdpName: 'akshay',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/pdp1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["8","9"],
             offers: [
                 {
@@ -257,6 +265,7 @@ export const PRODUCTSLIST = [
             pdpName: 'akshay',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/pdp1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["8","9"],
             offers: [
                 {
@@ -288,6 +297,7 @@ export const PRODUCTSLIST = [
             pdpName: 'akshay',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/pdp1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["8","9"],
             offers: [
                 {
@@ -319,6 +329,7 @@ export const PRODUCTSLIST = [
             pdpName: 'akshay',
             pdpDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             pdpImg0: '../assests/images/shoes/pdp1.jpg',
+            pdpImgM: '../assests/images/shoes/products/merc3Mobile.jpg',
             sizes: ["8","9"],
             offers: [
                 {

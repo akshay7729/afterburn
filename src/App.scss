@@ -91,9 +91,36 @@ body{font-family: $roboto;}
       color:rgba(0,0,0,0.5);
     }
   }
+  .prodImgResBox{
+    img{
+      width: 100%;
+      border-top-left-radius: calc(.25rem - 1px);
+      border-top-right-radius: calc(.25rem - 1px);
+    }
+  }
   transition: all 0.3s ease;
   &:hover{
     box-shadow: 0px 6px 6px rgba(0,0,0,0.2);
+  }
+  @media screen and (max-width: 480px) {
+    border-radius: 0;
+    .prodImgResBox{
+      img{
+        height: 13rem;
+      }
+    }
+    .card-body{
+      padding: 0.5rem;
+      .card-title{
+        font-size: 0.7rem;
+      }
+      .productDesc{
+        font-size: 0.75rem;
+      }
+      .productPrice{
+        font-size: 0.9rem;
+      }
+    }
   }
 }
 
@@ -157,6 +184,12 @@ body{font-family: $roboto;}
           text-decoration: line-through;
           color:rgba(0,0,0,0.5);
         }
+        @media screen and (max-width: 480px) {
+          font-size: 1.2rem;
+          .pdpPriceOld{
+            padding-left: 0.8rem !important;
+          }
+        }
       }
       .pdpName{
         font-size: 1.4rem;
@@ -174,6 +207,15 @@ body{font-family: $roboto;}
         img{
           height: 40rem;
           max-height: 50rem;
+          width: 100%;
+          border-top-left-radius: calc(.25rem - 1px);
+          border-top-right-radius: calc(.25rem - 1px);
+        }
+        @media screen and (max-width: 480px) {
+          margin-bottom: 1rem;
+          img{
+            height: 14rem;
+          }
         }
       }
       .pdpSelectSize{
@@ -216,7 +258,14 @@ body{font-family: $roboto;}
             border:1px solid rgba(0, 0, 0, 0.2);
           }
         }
+        @media screen and (max-width: 480px) {
+          button{width: 100%; margin-bottom: 1rem}
+          .pdpAddToWishListBtn{padding-left: 0rem !important;}
+        }
       }
     }
+  }
+  @media screen and (max-width: 480px) {
+    padding: 1rem !important;
   }
 }

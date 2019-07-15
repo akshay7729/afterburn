@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { Col, Row, Card, CardImg, CardBody, CardText, CardTitle, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRupeeSign, faTag, faShoppingBag, faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image';
 
 const mapStateTOProps = state => {
     return{
@@ -21,7 +22,27 @@ class Pdp extends Component {
                         <Col md="5" className="pdpInner">
                             <div className="pdpInnerData">
                                 <Card className="pdpProdImg">
-                                    <CardImg top width="100%" src={pdp.pdpDeatils.pdpImg0} alt="hello" />
+                                    <ResponsiveImage className="prodPDPResBox">
+                                        <ResponsiveImageSize
+                                            default
+                                            minWidth={0}
+                                            path={pdp.pdpDeatils.pdpImgM}
+                                        />
+                                        <ResponsiveImageSize
+                                            default
+                                            minWidth={480}
+                                            path={pdp.img}
+                                        />
+                                        <ResponsiveImageSize
+                                            minWidth={768}
+                                            path={pdp.pdpDeatils.pdpImg0}
+                                        />
+                                        <ResponsiveImageSize
+                                            minWidth={1100}
+                                            path={pdp.pdpDeatils.pdpImg0}
+                                        />
+                                    </ResponsiveImage>
+                                    {/* <img top width="100%" src={pdp.pdpDeatils.pdpImg0} className="card-top-img" alt="hello" /> */}
                                 </Card>
                             </div>
                         </Col>
